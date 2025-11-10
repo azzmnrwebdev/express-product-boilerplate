@@ -42,9 +42,10 @@ router.put('/:id', async (req, res, next) => {
     /**
      * gunakan categories.update()
      * gunakan try catch untuk menangani error
-     * jika berhasil, menangkap id dari request params
+     * tangkap id dari request params
+     * cari kategori berdasarkan id menggunakan categories.findByPk()
+     * jika tidak ditemukan, kembalikan response dengan status 404 dan pesan "Kategori tidak ditemukan"
      * jika berhasil memperbarui kategori, kembalikan response dengan status 200 dan pesan "Kategori berhasil diperbarui"
-     * jika tidak ada kategori dengan id tersebut, kembalikan response dengan status 404 dan pesan "Kategori tidak ditemukan"
      * jika terjadi error, kembalikan response dengan status 500 dan pesan error
      */
 });
